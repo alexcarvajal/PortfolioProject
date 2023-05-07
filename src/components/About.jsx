@@ -1,6 +1,6 @@
 
 import './../styles/About.css';
-
+import miFoto from './../assets/FotoAbout.jpg'
 import { useRef, useEffect } from 'react';
 
 const About = () => {
@@ -25,14 +25,20 @@ const About = () => {
     };
   }, []);
 
+
   return (
     <section ref={sectionRef} className="full-screen-section about">
-      <div className="content">
-        <h1>About</h1>
-        <p>Contenido de la sección About</p>
+      <div className="contentAbout">
+      <img src={miFoto} className="foto fade-in" alt="Mi foto" />
+        <div className="texto">
+          <h2>¡Hola! Soy Alex!</h2>
+          <p>Aquí puedes colocar una descripción tuya.</p>
+      </div>
       </div>
     </section>
   );
+
+
 };
 
 export default About;

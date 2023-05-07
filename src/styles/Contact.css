@@ -1,4 +1,8 @@
 .contact {
-  background-color: #b03434;
+  background-color: #7ea4a9;
   height: 100vh;
 }
+
+.sidebar{
+  display: none;
+ }

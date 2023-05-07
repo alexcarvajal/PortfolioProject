@@ -1,18 +1,10 @@
-body {
+
+.app{
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Desactiva el scroll por defecto del navegador */
-}
-section {
-  transition: transform 0.8s ease-in-out;
+  overflow: hidden; 
 }
 
-/* Estilos para la sección activa */
-section.active {
-  transform: translateY(0);
-}
-
-/* Estilos para las secciones inactivas */
-section.inactive {
-  transform: translateY(100%);
+.sidebar{
+ display: none;
 }

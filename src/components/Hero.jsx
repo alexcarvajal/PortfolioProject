@@ -1,7 +1,7 @@
 
 import './../styles/Hero.css';
 import{ useRef, useEffect } from 'react';
-
+import ContentHero from '../content/ContentHero';
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -30,6 +30,7 @@ const Hero = () => {
       <div className="content">
         <h1>Hero</h1>
         <p>Contenido de la sección Hero</p>
+        <ContentHero />
       </div>
     </section>
   );
