@@ -2,14 +2,15 @@
 import './../styles/Hero.css';
 import{ useRef, useEffect } from 'react';
 import ContentHero from '../content/ContentHero';
-
+import { useChange } from '../context/useChange';
 const Hero = () => {
   const sectionRef = useRef(null);
-
+  const {change,setChange}= useChange();
   useEffect(() => {
     const section = sectionRef.current;
     const handleScroll = (event) => {
       event.preventDefault();
+      setChange(false);
       if (event.deltaY < 0) {
         const prevSection = section.previousElementSibling;
         if (prevSection) {

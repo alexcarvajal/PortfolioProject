@@ -10,7 +10,6 @@ section {
   z-index: 1;
 }
 .contentAbout {
-  background-color: #c4d4ca;
   justify-content: center;
   align-items: center;
   width: 80%;
@@ -19,13 +18,13 @@ section {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
 }
 
- .foto {
+ .foto{
   width: 300px;
   height:auto;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: 140px;
-  margin-right: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  margin-right: 40px;
 }
 
 .texto {
@@ -34,10 +33,16 @@ section {
   margin-top: 140px;
 }
 
-.fade-in{
+#fade-in{
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   -webkit-animation: fadeIn 1s ease-in-out forwards;
+}
+
+#fade-on{
+  opacity: 1;
+ /*  animation: fadeOn 1s ease-in-out forwards;
+  -webkit-animation: fadeOn 1s ease-in-out forwards; */
 }
 
 @keyframes fadeIn {
@@ -47,4 +52,25 @@ section {
   to {
     opacity: 1;
   }
+  }
+
+  @media (max-width: 768px) {
+    .contentAbout {
+    width: 80%;
+    height: 90%;
+    }
+    .foto {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    margin-top: 30px;
+    margin-right: 25%;
+
+    }
+    .texto {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: -20px;
+    }
   }

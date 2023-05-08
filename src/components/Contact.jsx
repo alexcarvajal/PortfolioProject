@@ -2,15 +2,15 @@
 import './../styles/Contact.css';
 
 import{ useRef, useEffect } from 'react';
-
-
+import { useChange } from '../context/useChange';
 const Contact = () => {
   const sectionRef = useRef(null);
-
+  const {change,setChange}= useChange();
   useEffect(() => {
     const section = sectionRef.current;
     const handleScroll = (event) => {
       event.preventDefault();
+      setChange(false);
       if (event.deltaY < 0) {
         const prevSection = section.previousElementSibling;
         if (prevSection) {
